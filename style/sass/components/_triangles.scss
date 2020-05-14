@@ -1,0 +1,19 @@
+%upTriangle {
+    border: 10px solid transparent;
+    border-bottom-color: $Green;
+}
+
+%downTriangle {
+    border: 10px solid transparent;
+    border-top-color: $Green;
+}
+
+%leftTriangle {
+    border: 10px solid transparent;
+    border-right-color: $Green;
+}
+
+%rightTriangle {
+    border: 10px solid transparent;
+    border-left-color: $Green;
+}

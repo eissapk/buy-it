@@ -1,0 +1,21 @@
+// normal button
+button {
+    background: $Green;
+    height: 40px;
+    color: $white;
+    border: 0;
+    border-radius: $radius;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+
+    &:active {
+        @include btnAnimation;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+}

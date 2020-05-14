@@ -1,0 +1,305 @@
+//- START HELPERS
+include ../helpers/variables
+include ../helpers/mixins
+//- END HELPERS
+
+//- START SIGNATURE
+include ../components/signature
+//- END SIGNATURE
+doctype
+html(lan="en" dir="ltr")
+    head
+        meta(charset="UTF-8")
+        title Buy IT
+        meta(name="theme-color" content="#ffffff")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+        //- START SEO
+        include ../components/seo
+        //- END SEO
+
+        //- START CSS
+        include ../components/style
+        //- END CSS
+
+        //- START HTMLSHIV
+        <!-- [if lt IE 9]>
+        script(src="script/html5shiv.js")
+        <![endif] -->
+        //- END HTMLSHIV
+
+    body
+
+        // !START MAIN WRAPPER
+        main
+
+            // start header
+            header
+
+                // start nav
+                nav
+                    // logo
+                    #logo
+                        a(href="index.html")
+                            img(src="img/logo.png", alt="logo")
+
+                    // nav buttons
+                    #navBtns
+                        // pages buttons
+                        ul
+                            li
+                                a(href="#home", class="active") home
+                            li
+                                a(href="#shop") shop
+                            li
+                                a(href="#reviews") reviews
+                            li
+                                a(href="#support") support
+                            li
+                                a(href="#blog") blog
+                            li
+                                span 0
+                                <svg class="click-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.333 469.333">
+                                    <path class="click-cart" d="M434.98 42.667H85.333v3.06l-4.375-15C75.687 12.635 58.844 0 40 0H10.667A10.66 10.66 0 0 0 0 10.667a10.66 10.66 0 0 0 10.667 10.667H40c9.427 0 17.844 6.313 20.48 15.365l66.396 227.635-34.02 42.52a34.48 34.48 0 0 0-7.521 21.458c0 18.948 15.406 34.354 34.354 34.354H416a10.66 10.66 0 1 0 0-21.334H119.687c-7.177 0-13.02-5.844-13.02-13.02 0-2.948 1-5.844 2.854-8.135l34.28-42.844h209.22c16.448 0 31.604-9.615 38.615-24.5l74.438-158.177c2.135-4.552 3.26-9.604 3.26-14.615v-3.02c0-18.947-15.406-34.353-34.354-34.353zM448 80.042c0 1.906-.427 3.823-1.24 5.542L372.333 243.75c-3.5 7.438-11.083 12.25-19.313 12.25H146.667L90.663 64H434.98c7.177 0 13.02 5.844 13.02 13.02v3.02zM128 384c-23.53 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S151.53 384 128 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333s9.573-21.333 21.333-21.333 21.333 9.573 21.333 21.333S139.76 448 128 448zm256-64c-23.53 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S407.53 384 384 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333s9.573-21.333 21.333-21.333 21.333 9.573 21.333 21.333S395.76 448 384 448z">
+                                    </path>
+                                </svg>
+                            li#searchBtn
+                                <svg class="click-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path class="click-search" d="M508.875 493.792L353.09 338.005c32.358-35.927 52.245-83.296 52.245-135.34C405.333 90.917 314.417 0 202.667 0S0 90.917 0 202.667s90.917 202.667 202.667 202.667c52.043 0 99.41-19.887 135.34-52.245l155.786 155.786c2.083 2.083 4.813 3.125 7.542 3.125s5.458-1.042 7.542-3.125c4.166-4.167 4.166-10.917-.001-15.083zM202.667 384c-99.98 0-181.333-81.344-181.333-181.333S102.688 21.333 202.667 21.333 384 102.677 384 202.667 302.646 384 202.667 384z">
+                                    </path>
+                                </svg>
+
+                        // menu button
+                        div(id="menuBtn", class="clickMenu")
+                            span.clickMenu
+                            span.clickMenu
+                            span.clickMenu
+
+                    div#engine
+                        input(type="text", placeholder="What are you looking for?", class="engine")
+                // end nav
+
+                // start text
+                #headerText
+                    h1 feel #[br] powerfull #[br] experience
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis.
+                    .btnsCon
+                        button(type="button") check it out
+                        button(type="button") buy
+                // end text
+
+                // start curve
+                .curve
+                    img(src="img/curve_1.svg", alt="curve1")
+                // end curve
+
+            // end header
+
+            // start menu
+            #menu
+                button(type="button", id="exitMenu")
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" xmlns:v="https://vecta.io/nano">
+                        <path d="M242.72 256L342.8 155.93c12.28-12.28 12.28-32.2 0-44.48L320.55 89.2c-12.28-12.28-32.2-12.28-44.48 0L176 189.28 75.93 89.2c-12.28-12.28-32.2-12.28-44.48 0L9.2 111.45c-12.28 12.28-12.28 32.2 0 44.48L109.28 256 9.2 356.07c-12.28 12.28-12.28 32.2 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72 276.07 422.8c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.2 0-44.48L242.72 256z"/>
+                    </svg>
+
+                .buttonsWrapper
+
+                    .iconsWrapper
+                        div
+                            input(type="text", placeholder="What are you looking for?", class="engine")
+
+                        div
+                            span 0
+                            <svg class="click-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.333 469.333">
+                                <path class="click-cart" d="M434.98 42.667H85.333v3.06l-4.375-15C75.687 12.635 58.844 0 40 0H10.667A10.66 10.66 0 0 0 0 10.667a10.66 10.66 0 0 0 10.667 10.667H40c9.427 0 17.844 6.313 20.48 15.365l66.396 227.635-34.02 42.52a34.48 34.48 0 0 0-7.521 21.458c0 18.948 15.406 34.354 34.354 34.354H416a10.66 10.66 0 1 0 0-21.334H119.687c-7.177 0-13.02-5.844-13.02-13.02 0-2.948 1-5.844 2.854-8.135l34.28-42.844h209.22c16.448 0 31.604-9.615 38.615-24.5l74.438-158.177c2.135-4.552 3.26-9.604 3.26-14.615v-3.02c0-18.947-15.406-34.353-34.354-34.353zM448 80.042c0 1.906-.427 3.823-1.24 5.542L372.333 243.75c-3.5 7.438-11.083 12.25-19.313 12.25H146.667L90.663 64H434.98c7.177 0 13.02 5.844 13.02 13.02v3.02zM128 384c-23.53 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S151.53 384 128 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333s9.573-21.333 21.333-21.333 21.333 9.573 21.333 21.333S139.76 448 128 448zm256-64c-23.53 0-42.667 19.135-42.667 42.667s19.135 42.667 42.667 42.667 42.667-19.135 42.667-42.667S407.53 384 384 384zm0 64c-11.76 0-21.333-9.573-21.333-21.333s9.573-21.333 21.333-21.333 21.333 9.573 21.333 21.333S395.76 448 384 448z">
+                                </path>
+                            </svg>
+
+                    ul
+                        li
+                            a(href="#home", class="active") home
+                        li
+                            a(href="#shop") shop
+                        li
+                            a(href="#reviews") reviews
+                        li
+                            a(href="#support") support
+                        li
+                            a(href="#blog") blog
+
+            // end menu
+
+            // start features
+            #features
+                h1 Features And Specifications
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, facere!
+
+                .boxesCon
+                    // 1st box
+                    div
+                        .iconCon
+                            img(src="img/features/computer.svg", alt="computer")
+
+                        h3 Extra bass
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, fugiat?
+                        button(type="button") BUY NOW
+
+                    // 2nd box
+                    div
+                        .iconCon
+                            img(src="img/features/multimedia.svg", alt="multimedia")
+
+                        h3 Noise isolating
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, fugiat?
+                        button(type="button") BUY NOW
+
+                    // 3rd box
+                    div
+                        .iconCon
+                            img(src="img/features/interface.svg", alt="interface")
+
+                        h3 Bluetooth
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, fugiat?
+                        button(type="button") BUY NOW
+
+                    // 4th box
+                    div
+                        .iconCon
+                            img(src="img/features/rocket.svg", alt="rocket")
+
+                        h3 Longer battery
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, fugiat?
+                        button(type="button") BUY NOW
+            // end features
+
+            // start offers
+            #offers
+
+                //curve
+                .curve
+                    img(src="img/curve_2.svg", alt="curve2")
+
+                .layoutCon
+                    // text
+                    .text
+                        h1 Exclusive offers using our app
+                        h2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, hic.
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci eum optio sed asperiores eveniet voluptatibus veniam dicta cumque possimus obcaecati quia sint exercitationem odio aliquid explicabo, vitae, debitis commodi animi, dolorem qui a autem quos dolor. Architecto beatae tempore perspiciatis!
+
+                        .mobile-img
+                            img(src="img/app-store.png", alt="ios")
+                            img(src="img/play-store.png", alt="android")
+
+                    // img
+                    .img
+                        img(src="img/mobile-app.jpg", alt="mobile")
+
+                //curve
+                .curve3
+                    img(src="img/curve_3.svg", alt="curve3")
+
+            // end offers
+
+            // start products
+            #products
+                h1 Related Products
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, facere!
+
+                .boxesCon
+                    // 1st box
+                    div
+                        .img
+                            img(src="img/White-edition-headphones.jpg", alt="White-edition-headphones")
+
+                        .details
+                            div.left
+                                h1 limited edition headphones
+                                p $275.00
+
+                            div.right
+                                span(class="fa fa-star checked")
+                                span(class="fa fa-star checked")
+                                span(class="fa fa-star checked")
+                                span(class="fa fa-star")
+                                span(class="fa fa-star")
+                                
+                        .btns
+                            button(type="button") DETAILS
+                            button(type="button") ADD TO CART
+
+                    // 2nd box
+                    div
+                        .img
+                            img(src="img/Sounds-as-powerful.jpg", alt="Sounds-as-powerful")
+
+                        .details
+                            div.left
+                                h1 Sounds As Powerful
+                                p $320.00
+                                
+                        .btns
+                            button(type="button") DETAILS
+                            button(type="button") ADD TO CART
+
+                    // 3rd box
+                    div
+                        .img
+                            img(src="img/Wireless-tv-headphones.jpg", alt="Wireless-tv-headphones")
+
+                        .details
+                            div.left
+                                h1 Wireless Tv Headphones
+                                p $230.00
+                                
+                            div.right
+                                span(class="fa fa-star checked")
+                                span(class="fa fa-star checked")
+                                span(class="fa fa-star checked")
+                                span(class="fa fa-star")
+                                span(class="fa fa-star")
+                                
+                        .btns
+                            button(type="button") DETAILS
+                            button(type="button") ADD TO CART
+
+                    // 4th box
+                    div
+                        .img
+                            img(src="img/Extra-bass-headphones.jpg", alt="Extra-bass-headphones")
+
+                        .details
+                            div.left
+                                h1 Extra Bass Headphones
+                                p $280.00
+                                
+                            div.right
+                                span(class="fa fa-star checked")
+                                span(class="fa fa-star checked")
+                                span(class="fa fa-star checked")
+                                span(class="fa fa-star")
+                                span(class="fa fa-star")
+                                
+                        .btns
+                            button(type="button") DETAILS
+                            button(type="button") ADD TO CART
+            // end products
+
+            // start addToCart
+            #addToCart
+                div
+                    div.left
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+                    
+                    div.right
+                        button(type="button") ADD TO CART
+            // end addToCart
+
+        // !END MAIN WRAPPER
+
+        // start footer
+        include ../layout/footer
+        // end footer
+
+        //- START JS
+        include ../components/script
+        //- END JS

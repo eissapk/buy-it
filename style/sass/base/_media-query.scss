@@ -1,0 +1,158 @@
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+
+
+/* start nav */
+nav {
+    @include tablet {
+        #navBtns {
+            height: 26px;
+
+            ul {
+                display: inline-block;
+            }
+
+            #menuBtn {
+                display: none;
+            }
+        }
+    }
+
+    @include sDesk {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* end nav */
+
+/* start header */
+header {
+    @include tablet {
+
+        /* text */
+        #headerText {
+            left: 170px;
+            right: auto;
+            max-width: 270px;
+            text-align: left;
+        }
+    }
+}
+
+/* end header */
+
+/* start menu */
+#menu {
+    @include tablet {
+        .buttonsWrapper {
+            width: 700px;
+        }
+    }
+}
+
+/* end menu */
+
+
+/* start features */
+#features {
+    @include tablet {
+        .boxesCon {
+            grid-template-columns: 1fr 1fr;
+
+            >div {
+                width: 200px;
+            }
+        }
+    }
+
+    @include sDesk {
+        .boxesCon {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    @include lDesk {
+        .boxesCon {
+            width: 1100px;
+            margin: 80px auto auto;
+        }
+    }
+}
+
+/* end features */
+
+
+/* start features */
+#offers {
+    @include sDesk {
+        .layoutCon {
+            width: 850px;
+            margin: 0 auto;
+
+            .text,
+            .img {
+                width: 400px;
+                float: $floatLeft;
+            }
+
+            .text {
+                margin-right: 25px;
+            }
+
+        }
+
+    }
+
+}
+
+/* end features */
+
+/* start products */
+#products {
+    @include tablet {
+        .boxesCon {
+            grid-template-columns: 1fr 1fr;
+
+            >div {
+                width: 235px;
+            }
+        }
+    }
+
+    @include sDesk {
+        .boxesCon {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    @include lDesk {
+        .boxesCon {
+            width: 1100px;
+            margin: 80px auto auto;
+        }
+    }
+}
+
+/* end products */
+
+/* start addToCart */
+#addToCart {
+    @include tablet {
+
+        >div {
+            grid-template-columns: auto auto;
+            grid-template-rows: 1fr;
+
+            .right {
+                button {
+                    margin-top: 0;
+                }
+            }
+        }
+
+    }
+}
+
+/* end addToCart */

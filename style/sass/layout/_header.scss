@@ -1,0 +1,70 @@
+header {
+    position: relative;
+    height: 100vh;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+
+    /* text */
+    #headerText {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        text-align: center;
+
+        h1 {
+            text-transform: capitalize;
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        p {
+            margin-top: 15px;
+            line-height: 24px;
+            color: $subText;
+            text-shadow: #bdbdbd 3px 3px 20px;
+
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+
+        .btnsCon {
+            margin-top: 20px;
+
+            button:first-child {
+                padding: 0px 20px;
+                font-size: 0.8em;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+
+            button:last-child {
+                background-color: $Gray;
+                padding: 0 25px;
+                color: $subText;
+                font-weight: bold;
+                border: 2px solid $border;
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    .curve {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
+
+}

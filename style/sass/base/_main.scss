@@ -1,0 +1,37 @@
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+* {
+    @include reset;
+
+    &::before {
+        @include reset;
+    }
+
+    &::after {
+        @include reset;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+html,
+body {
+    @include reset;
+    @include body;
+    @include hideNumArrow;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
